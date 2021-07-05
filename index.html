@@ -4,10 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <title>Practica HTML CSS keepcoding</title>
+
+    <style>
+        .formulario {
+            border: 1px solid red;
+            height: 100vh;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .formulario form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+
+        }
+    </style>
 </head>
 
 <body>
+
+    <main>
+        <div class="formulario">
+            <form action="get">
+                <label>nombre</label>
+                <input type="text">
+                <label>Apellidos</label>
+                <input type="text">
+                <button>Entrar</button>
+            </form>
+        </div>
+    </main>
+
 
 </body>
 
