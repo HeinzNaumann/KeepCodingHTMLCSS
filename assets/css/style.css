@@ -176,6 +176,10 @@ ul.menu-hamburguesa li {
     display: none;
   }
 
+  .peliculas-final {
+    padding: 20px;
+  }
+
   .peliculas {
     display: grid;
     flex-wrap: nowrap;
