@@ -1,0 +1,196 @@
+:root {
+  --background-color: black;
+}
+
+body {
+  background-color: var(--background-color);
+  color: white;
+  padding: 20px;
+}
+
+.formulario {
+  border: 1px solid red;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.icono-estrella {
+  position: relative;
+  bottom: 0;
+  top: 80px;
+  left: 230px;
+  background-color: rgb(1, 1, 1, 0.5);
+}
+
+.navegacion {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul.menu {
+  display: inline-block;
+  list-style: none;
+  justify-content: space-between;
+  padding: 0 0px;
+  align-self: center;
+}
+
+ul.menu li {
+  display: inline-block;
+  margin: 0;
+}
+
+ul.menu li a {
+  padding: 1rem;
+}
+
+ul.menu-hamburguesa {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  justify-content: space-between;
+  padding: 0 0px;
+  align-self: center;
+}
+
+ul.menu-hamburguesa li {
+  display: inline-block;
+  margin: 0;
+}
+
+ul.menu-hamburguesa li a {
+  border: 1px red solid;
+  padding: 1rem;
+}
+
+ul.menu-hamburguesa li {
+  display: none;
+}
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.peliculas {
+  display: grid;
+  flex-wrap: nowrap;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-rows: row;
+  gap: 100px;
+  border: 1px solid red;
+  justify-items: center;
+  z-index: 1;
+}
+
+.imagen-pelicula {
+  position: relative;
+  margin-top: 0;
+}
+
+.star-label {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  z-index: 999;
+  color: red;
+  background-image: url("assets/img/icon-star.png");
+}
+
+.star-label::after {
+  color: red;
+  content: "";
+
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  right: 1rem;
+  top: 2.5rem;
+  z-index: 10;
+}
+.card {
+  position: relative;
+}
+
+.tarjeta-2 {
+  display: none;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 90%;
+  left: 0;
+  background-color: rgb(1, 1, 1, 0.8);
+}
+.contenedor-tarjetas:hover .tarjeta-2 {
+  display: block;
+}
+
+.control-me::after {
+  content: "👍🏽";
+  font-size: 50px;
+}
+#toggle:checked ~ .control-me::after {
+  content: "👎🏽";
+}
+
+.esconder {
+  opacity: 0;
+}
+
+.peliculas-final {
+  padding: 100px;
+}
+
+@media all and (max-width: 500px) {
+  .burger-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .burger-label::before {
+    content: "";
+    background-color: darkgrey;
+    width: 1.9rem;
+    height: 0.25rem;
+    position: absolute;
+    right: 1rem;
+    top: 2.5rem;
+    box-shadow: 0 0.5rem 0 0 darkgrey, 0 1rem 0 0 darkgrey;
+  }
+
+  ul.menu li {
+    display: none;
+  }
+
+  .peliculas {
+    display: grid;
+    flex-wrap: nowrap;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-rows: row;
+    gap: 100px;
+    border: 1px solid red;
+    justify-items: center;
+  }
+
+  .icono-estrella {
+    position: relative;
+    bottom: 380px;
+    left: 280px;
+    background-color: rgb(1, 1, 1, 0.5);
+  }
+}

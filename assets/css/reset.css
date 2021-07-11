@@ -13,7 +13,7 @@ body {
   padding: 0;
 }
 
-img,
-video {
-  max-width: 100%;
+a {
+  text-decoration: none;
+  color: white;
 }

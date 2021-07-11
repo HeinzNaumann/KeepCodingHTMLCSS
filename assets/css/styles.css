@@ -1,0 +1,90 @@
+:root {
+  --fuente-principal: "Lato", sans-serif;
+  --primario: #da595e;
+  --obscuro: #484848;
+  --claro: #ffffff;
+}
+
+html {
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--fuente-principal);
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 2.6rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+img {
+  max-width: 100%;
+}
+
+/** Colores **/
+.hospedaje {
+  color: #274154;
+}
+
+.concierto {
+  color: #da595e;
+}
+.clase {
+  color: #598dda;
+}
+.paseo {
+  color: #940ad4;
+}
+
+/* Interfaz **/
+
+.btn-flotante {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.5rem 2rem;
+  background-color: var(--claro);
+  box-shadow: 0px 6px 32px -10px rgba(0, 0, 0, 0.75);
+  color: var(--obscuro);
+  text-decoration: none;
+}
+.btn-flotante.activo {
+  background-color: var(--primario);
+  color: var(--claro);
+}
+
+/** Contenido Principal**/
+
+main > section {
+  margin-bottom: 2rem;
+}
+
+.contenedor-cards {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card img {
+  width: 100%;
+}
+
+.info .categoria {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.info .titulo {
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin: 0;
+}
+.info .precio {
+  color: var(--obscuro);
+  font-size: 0.9rem;
+}
